@@ -12,16 +12,14 @@ class PrincipalViewController: UIViewController {
     
     @IBOutlet weak var btnItem1: UIButton!
     @IBOutlet weak var btnItem2: UIButton!
-    @IBOutlet weak var btnItem3: UIButton!
     
     @IBOutlet weak var imgBtnItem1: UIImageView!
     @IBOutlet weak var imgBtnItem2: UIImageView!
-    @IBOutlet weak var imgBtnItem3: UIImageView!
+
     
     @IBOutlet weak var imgTitulo: UIImageView!
     
     @IBOutlet weak var principal_btnMenu: UIBarButtonItem!
-    
 
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     
@@ -59,22 +57,17 @@ class PrincipalViewController: UIViewController {
     func slide(){
         btnItem1.isHidden=true
         btnItem2.isHidden=true
-        btnItem3.isHidden=true
         
         imgBtnItem1.isHidden=true
         imgBtnItem2.isHidden=true
-        imgBtnItem3.isHidden=true
-        
+  
         imgTitulo.alpha=0
         
         imgTitulo.fadeIn(withduration: 0.5)
         
-        
         self.imgBtnItem1.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         self.imgBtnItem2.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        self.imgBtnItem3.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        
-        
+
         delay(delay: 0.1){
             self.imgBtnItem1.isHidden=false
             self.imgBtnItem1.animationScaleEffect(view: self.imgBtnItem1, animationTime: 0.3)
@@ -83,15 +76,12 @@ class PrincipalViewController: UIViewController {
             self.imgBtnItem2.isHidden=false
             self.imgBtnItem2.animationScaleEffect(view: self.imgBtnItem2, animationTime: 0.3)
         }
-        delay(delay:0.7){
-            self.imgBtnItem3.isHidden=false
-            self.imgBtnItem3.animationScaleEffect(view: self.imgBtnItem3, animationTime: 0.3)
-        }
+  
         
         delay(delay:1.0){
             self.btnItem1.isHidden = false
             self.btnItem2.isHidden = false
-            self.btnItem3.isHidden = false
+      
         }
     }
     
